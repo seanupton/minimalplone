@@ -12,3 +12,4 @@ zope.mkzeoinstance==6.0
 
 # add-ons from PyPI
 collective.fingerpointing==1.8.3
+collective.monkeypatcher==1.2.2

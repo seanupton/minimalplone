@@ -1,14 +1,16 @@
+---
 default_context:
   initial_user_name: "admin"
-  initial_user_password: "thanksTurkeyS0up"
+  # change this in real use
+  initial_user_password: "admin-plone-123"
 
-  # wsgi_listen: localhost:8082
+  wsgi_listen: localhost:8080
 
-  # zcml_package_includes: 
-  # if you want to include the training.votable:
-  # zcml_package_includes: ploneconf.site, Products.PDBDebugMode, plone.reload, training.votable
-
-  # include meta.zcml of collective.monkeypatcher to provide directive monkey:patch for Products.PDBDebugMode
+  # zcml diretives/meta for additional packages:
   zcml_package_metas: collective.monkeypatcher
 
-  db_storage: direct
+  db_storage: zeo
+  db_blob_mode: shared
+  db_blob_location: "{{cookiecutter.location_clienthome}}/zeo/var/blobstorage"
+  db_zeo_server: 127.0.0.1:8100
+  db_zeo_name: 1
