@@ -1,0 +1,14 @@
+# Plone constraints (here, local and per version):
+-c versions/plone/6.1.0/constraints.txt
+
+# build materials, all versions pinned
+cookiecutter==2.6.0
+
+# Plone core, all versions pinned
+Plone==6.1.0
+
+# Means to build, run ZEO instance:
+zope.mkzeoinstance==6.0
+
+# add-ons from PyPI
+collective.fingerpointing==1.8.3
